@@ -1,9 +1,10 @@
 # Masking
 
-There are many options, and below we can see the complete list, as taken from the CDP documentation here.
+ranger s, and below we can see the complete list, as taken from the CDP documentation here.
 
-| Masking type      | Description | Types |
+| Masking type      | Description | Type supported |
 | ----------------- | ----------- |-------|
+|Redact | mask all alphabetic characters with “x” and all numeric characters with “n”| Int|
 | Partial mask: show last 4   | show only the last four characters.  | Int       |
 | Partial mask: show first 4  |show only the first four characters. | Int        |
 | Hash |  replace all characters with a hash of entire cell value.  | String|
