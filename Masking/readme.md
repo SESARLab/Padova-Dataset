@@ -42,12 +42,23 @@ public final class MLower extends UDF {
 
 ```
 
-The packaged function is then registered in Hive with the following command:
+The packaged function needs to be registered in Hive with the following command:
 
 ```sql
 CREATE FUNCTION something AS 'com.example.hive.udf.MLower' USING JAR 'hdfs:///udfTest-1.0-SNAPSHOT-jar-with-dependencies.jar'
 ```
-Is possible to use the function in the same way as the other masking functions:
+You can use the function in the same way as the other masking functions:
 ```sql
-SELECT something("ciao")
+SELECT something("Hello")
 ```
+which should return, something like:
+```
+Example, hello
+```
+
+
+
+
+
+
+
