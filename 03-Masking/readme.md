@@ -4,9 +4,9 @@ Ranger offers many masking options, and below we can see the complete list, as t
 
 | Masking type      | Description | Type supported |
 | ----------------- | ----------- |----------------|
-|Redact | mask all alphabetic characters with “x” and all numeric characters with “n”| Int|
-| Partial mask: show last 4   | show only the last four characters.  | String       |
-| Partial mask: show first 4  |show only the first four characters. | String        |
+|Redact | mask all alphabetic characters with “x” and all numeric characters with “n”| String, Int|
+| Partial mask: show last 4   | show only the last four characters.  | String, Int       |
+| Partial mask: show first 4  |show only the first four characters. | String, Int       |
 | Hash |  replace all characters with a hash of entire cell value.  | String|
 | Nullify|replace all characters with a NULL value.|All|
 |Unmasked(retain original value)| no masking is applied.|All|
