@@ -5,8 +5,8 @@ Ranger offers many masking options, and below we can see the complete list, as t
 | Masking type      | Description | Type supported |
 | ----------------- | ----------- |----------------|
 |Redact | mask all alphabetic characters with “x” and all numeric characters with “n”| Int|
-| Partial mask: show last 4   | show only the last four characters.  | Int       |
-| Partial mask: show first 4  |show only the first four characters. | Int        |
+| Partial mask: show last 4   | show only the last four characters.  | String       |
+| Partial mask: show first 4  |show only the first four characters. | String        |
 | Hash |  replace all characters with a hash of entire cell value.  | String|
 | Nullify|replace all characters with a NULL value.|All|
 |Unmasked(retain original value)| no masking is applied.|All|
@@ -23,10 +23,11 @@ upper(concat("Before",substr({col},(instr({col},"@"))),"After"))
 ```
 More examples of available functions can be found here : [https://cwiki.apache.org/confluence/display/hive/languagemanual+udf](https://cwiki.apache.org/confluence/display/hive/languagemanual+udf)
 ## Custom UDF Function
-It's also possible to use a custom UDF function to mask the data.
+It's also possible to use a custom UDF function to mask data.
 To write a custom UDF function, you need to compile it into a jar file, and upload it to HDFS, or somewhere reachable from Hive.
 
 The core of the custom UDF function is the following:
+
 ```java
 package com.example.hive.udf;
 
