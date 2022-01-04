@@ -1,4 +1,4 @@
-`# Masking
+# Masking
 
 Ranger offers many masking options, and below we can see the complete list, as taken from the CDP documentation here.
 
